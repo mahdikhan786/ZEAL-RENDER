@@ -1,0 +1,14 @@
+{
+  "name": "zealrender",
+  "version": "1.0.0",
+  "description": "Commercial company",
+  "main": "server.js",
+  "scripts": {
+   "build": "node server.js"
+  },
+  "author": "Khansofficial",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
