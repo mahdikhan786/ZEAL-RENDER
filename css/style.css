@@ -1,0 +1,480 @@
+@import url("https://fonts.googleapis.com/css?family=Kanit:400,500i&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 100vw;
+  position: absolute;
+  background: black;
+}
+
+.home-page {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+.home-page .menu-toggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: absolute;
+  right: 10vw;
+  top: 10vh;
+  z-index: 3;
+  height: 25px;
+  width: 20px;
+}
+
+.home-page .menu-toggle hr {
+  height: 4px;
+  width: 95%;
+  border: 1px solid brown;
+  background: brown;
+}
+
+.home-page .menu-toggle :nth-child(2) {
+  -webkit-transition-duration: 400ms;
+  -o-transition-duration: 400ms;
+  transition-duration: 400ms;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  -o-transition-property: transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+  width: 130%;
+}
+
+.home-page .toggle-body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.97);
+  -webkit-animation-name: toggleAnimation;
+  animation-name: toggleAnimation;
+  -webkit-animation-duration: 400ms;
+  animation-duration: 400ms;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  width: 100vw;
+  height: 100vh;
+  padding: 15vh 10vh;
+  z-index: 2;
+}
+
+.home-page .toggle-body .toggle-list {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.home-page .toggle-body .toggle-list li {
+  list-style-type: none;
+}
+
+.home-page .toggle-body .toggle-list li a {
+  text-decoration: none;
+  color: white;
+  font-family: Arial;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.home-page header h1 {
+  color: #ffffff;
+  text-align: left;
+  margin-left: 10vw;
+  padding-top: 15vh;
+  font-family: Arial;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.home-page header h2 {
+  color: #ffffff;
+  text-align: right;
+  margin-top: 5vh;
+  margin-right: 30px;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 5px;
+}
+
+.home-page .background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  -webkit-filter: blur(2px);
+  filter: blur(2px);
+  -webkit-filter: brightness(50%);
+  filter: brightness(50%);
+  z-index: -1;
+}
+
+.home-page main {
+  padding: 0 0 50px 0;
+  min-height: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.home-page main p {
+  text-shadow: 5px 5px 3px black;
+  font-style: italic;
+  letter-spacing: 3px;
+  font-family: "Kanit", sans-serif;
+  line-height: 23px;
+  font-size: 16px;
+  line-height: 28px;
+  color: white;
+  margin-left: 10vw;
+}
+
+.home-page main .homepage-contact .homepage-phone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 5vw;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+}
+
+.home-page main .homepage-contact .homepage-phone .phone-icon {
+  margin-right: 10px;
+}
+
+.home-page main .homepage-contact .homepage-phone .phone-num a {
+  font-size: 11px;
+  text-decoration: none;
+  color: white;
+}
+
+.home-page main .homepage-contact .homepage-location {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 5vw;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+}
+
+.home-page main .homepage-contact .homepage-location .location-icon {
+  margin-right: 10px;
+}
+
+.home-page main .homepage-contact .homepage-location .location-text a {
+  font-size: 11px;
+  text-decoration: none;
+  color: white;
+}
+
+.home-page main .homepage-contact .homepage-email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 5vw;
+  letter-spacing: 2px;
+}
+
+.home-page main .homepage-contact .homepage-email .email-icon {
+  margin-right: 10px;
+}
+
+.home-page main .homepage-contact .homepage-email .email-id a {
+  font-size: 11px;
+  text-decoration: none;
+  color: white;
+}
+
+.display-none {
+  display: none;
+}
+
+.rotate {
+  -webkit-transform: rotateZ(-230deg);
+  -ms-transform: rotate(-230deg);
+  transform: rotateZ(-230deg);
+}
+
+@-webkit-keyframes toggleAnimation {
+  0% {
+    -webkit-transform: translate(100vw, 0);
+    transform: translate(100vw, 0);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes toggleAnimation {
+  0% {
+    -webkit-transform: translate(100vw, 0);
+    transform: translate(100vw, 0);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+}
+
+.about-page {
+  position: relative;
+  padding: 40px 0 30px 0;
+  min-height: 100vh;
+}
+
+.about-page h2 {
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 40px;
+  text-align: center;
+  padding: 60px 0 80px 0;
+}
+
+.about-page .about-cols {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.about-page .about-cols p {
+  padding: 5vw;
+  color: white;
+  font-family: "Kanit", sans-serif;
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 2px;
+  width: 70vw;
+  margin: 20px 0 20px 0;
+  font-style: italic;
+}
+
+.about-page .background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-filter: blur(2px) brightness(15%);
+  filter: blur(2px) brightness(15%);
+  height: 100%;
+  width: 100vw;
+  z-index: -1;
+}
+
+.services-page {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  padding: 40px 0 30px 0;
+}
+
+.services-page h2 {
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 40px;
+  text-align: center;
+  padding: 60px 0 80px 0;
+}
+
+.services-page .services-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin: 0 0 0 10vw;
+  padding: 0 0 50px 0;
+}
+
+.services-page .services-list ul {
+  line-height: 40px;
+}
+
+.services-page .services-list ul li {
+  letter-spacing: 2px;
+  font-size: 16px;
+  font-style: italic;
+  font-family: "Kanit", sans-serif;
+  color: white;
+  font-family: "Kanit", sans-serif;
+  list-style: none;
+}
+
+.services-page .background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-filter: blur(2px) brightness(15%);
+  filter: blur(2px) brightness(15%);
+  height: 100%;
+  width: 100vw;
+  z-index: -1;
+}
+
+.invitation-page {
+  position: relative;
+  min-height: 100vh;
+  padding: 40px 0 0 0;
+}
+
+.invitation-page h2 {
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 40px;
+  text-align: center;
+  padding: 60px 0 80px 0;
+}
+
+.invitation-page p {
+  margin: 20px 10vw;
+  color: white;
+  font-family: "Kanit", sans-serif;
+  line-height: 25px;
+  letter-spacing: 2px;
+  font-size: 16px;
+}
+
+.invitation-page p br {
+  display: block;
+  content: "";
+  margin: 30px 0 0 0;
+}
+
+.invitation-page .building-png {
+  margin: auto;
+  width: 100vw;
+}
+
+.invitation-page .background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-filter: blur(2px) brightness(30%);
+  filter: blur(2px) brightness(30%);
+  height: 100%;
+  width: 100vw;
+  z-index: -1;
+}
+
+@media only screen and (max-height: 750px) {
+  .home-page main p {
+    font-size: 13px;
+  }
+  .home-page main .homepage-contact .homepage-phone {
+    margin-bottom: -2px;
+  }
+  .home-page main .homepage-contact .homepage-location {
+    margin-bottom: -2px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .home-page header h1 {
+    margin-left: 30vw;
+    padding-top: 15vh;
+    font-family: Arial;
+    font-size: 70px;
+    font-weight: bold;
+  }
+  .home-page header h2 {
+    text-align: left;
+    margin-left: 50vw;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: 5px;
+  }
+  .about-page .about-cols {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+  .about-page .about-cols p {
+    min-height: 50vh;
+    font-size: 20px;
+    line-height: 35px;
+  }
+  .services-page .services-list ul li {
+    font-size: 25px;
+  }
+  .invitation-page p {
+    font-size: 25px;
+    line-height: 35px;
+  }
+  .invitation-page .building-png {
+    max-width: 40vw;
+    margin: 15px 0 0 10vw;
+    -webkit-filter: opacity(0.5);
+    filter: opacity(0.5);
+  }
+}
