@@ -178,6 +178,19 @@ body {
   margin-left: 10vw;
 }
 
+.home-page main .homepage-contact {
+  width: 100vw;
+  padding: 8px 0px;
+  z-index: 5;
+  background: black;
+  border-top: 0.5px solid black;
+  -webkit-box-shadow: 0 0 3px 5px black;
+  box-shadow: 0 0 3px 5px black;
+  position: fixed;
+  bottom: 0px;
+  left: 0;
+}
+
 .home-page main .homepage-contact .homepage-phone {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -402,6 +415,7 @@ body {
 
 .invitation-page .building-png {
   margin: auto;
+  margin-bottom: 50px;
   width: 100vw;
 }
 
@@ -429,6 +443,36 @@ body {
 }
 
 @media only screen and (min-width: 1000px) {
+  .home-page main .homepage-contact {
+    width: 100vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .home-page main .homepage-contact .homepage-phone {
+    margin-left: 20px;
+  }
+  .home-page main .homepage-contact .homepage-phone .phone-num a {
+    font-size: 14px;
+  }
+  .home-page main .homepage-contact .homepage-location {
+    margin-left: 20px;
+  }
+  .home-page main .homepage-contact .homepage-location .location-text a {
+    font-size: 14px;
+  }
+  .home-page main .homepage-contact .homepage-email {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .home-page main .homepage-contact .homepage-email .email-id a {
+    font-size: 14px;
+  }
   .home-page header h1 {
     margin-left: 30vw;
     padding-top: 15vh;
@@ -473,7 +517,7 @@ body {
   }
   .invitation-page .building-png {
     max-width: 40vw;
-    margin: 15px 0 0 10vw;
+    margin: 15px 0 70px 10vw;
     -webkit-filter: opacity(0.5);
     filter: opacity(0.5);
   }
