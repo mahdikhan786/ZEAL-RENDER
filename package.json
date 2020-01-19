@@ -4,11 +4,13 @@
   "description": "Commercial company",
   "main": "server.js",
   "scripts": {
-   "build": "node server.js"
+    "deploy": "gh-pages -d dist"
   },
   "author": "Khansofficial",
   "license": "MIT",
+  "homepage":"https://mahdikhan786.github.io/ZEAL-RENDER/",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "gh-pages": "^2.2.0"
   }
 }
