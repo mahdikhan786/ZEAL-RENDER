@@ -11,9 +11,10 @@ $paragraph-color: white;
 $heading-font: Arial;
 $para-font: 'Kanit', sans-serif;
 $heading-size: 40px;
-$heading-padding: 60px 0 80px 0;
+$heading-padding: 60px 0px 80px 0px;
 
 body {
+    overflow-x: hidden;
     max-width: 100vw;
     position: absolute;
     background: black;
@@ -103,7 +104,7 @@ body {
 
         h2 {
             color: $heading-color;
-            text-align: right; //vary
+            text-align: right;
             margin-top: 5vh;
             margin-right: 30px; //vary
             font-family: $heading-font;
@@ -144,6 +145,15 @@ body {
         }
 
         .homepage-contact {
+            width:100vw;
+            padding:8px 0px;
+            z-index:5;
+            background:black ;//rgb(111,8,113);
+            border-top:0.5px solid black;
+            box-shadow:0 0 3px 5px black;
+            position:fixed;
+            bottom:0px;
+            left:0;
             .homepage-phone {
                 display: flex;
                 margin-left: 5vw;
@@ -328,7 +338,7 @@ body {
     }
 
     p {
-        margin: 20px 10vw; //vary
+        margin: 40px 10vw; //vary
         color: $paragraph-color;
         font-family: $para-font;
         line-height: 25px; //vary
@@ -340,11 +350,17 @@ body {
             margin: 30px 0 0 0;
         }
     }
-
+    .form{
+        margin-left:2.5%;
+        height:750px;
+        width:95vw;
+        
+    }
     
 
     .building-png {
-        margin: auto;
+   margin:auto;
+        margin-bottom:50px;
         width: 100vw;
     }
 
@@ -387,6 +403,39 @@ body {
 
 @media only screen and (min-width:1000px) {
     .home-page {
+        main{
+            .homepage-contact{
+                width:100vw;
+                display:flex;
+                justify-content:space-around;
+                align-items:center;
+                .homepage-phone{
+                    margin-left:20px;
+                    .phone-num{
+                        a{
+                            font-size:14px;
+                        }
+                    }
+                }
+                .homepage-location{
+                    margin-left:20px;
+                    .location-text{
+                        a{
+                            font-size:14px;
+                        }
+                    }
+                }
+                .homepage-email{
+                    margin-left:20px;
+                    margin-right:20px;
+                    .email-id{
+                        a{
+                            font-size:14px;
+                        }
+                    }
+                }
+            }
+        }
         header {
             h1 {
                 margin-left: 30vw; //vary
@@ -446,7 +495,7 @@ body {
 
         .building-png {
             max-width: 40vw;
-            margin: 15px 0 0 10vw;
+            margin: 15px 0 70px 10vw;
             filter: opacity(0.5);
         }
     }
