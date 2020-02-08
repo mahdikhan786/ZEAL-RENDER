@@ -115,25 +115,132 @@ body {
   font-weight: bold;
 }
 
-.home-page header h1 {
-  color: #ffffff;
-  text-align: left;
-  margin-left: 10vw;
-  padding-top: 15vh;
-  font-family: Arial;
-  font-size: 50px;
-  font-weight: bold;
+.home-page header {
+  margin: 30vh 0vw;
+}
+
+.home-page header .heading-svg {
+  position: absolute;
+  top: 15vh;
+  left: 0vw;
+  width: 70vw;
+  height: 80px;
+  margin-left: 15%;
+  -webkit-animation: fill-color 2s ease-in forwards 2.9s;
+          animation: fill-color 2s ease-in forwards 2.9s;
+}
+
+.home-page header .heading-svg path:nth-child(1) {
+  stroke-dasharray: 408.1384582519531;
+  stroke-dashoffset: 408.1384582519531;
+  -webkit-animation: stroke-anim 1s ease-in forwards;
+          animation: stroke-anim 1s ease-in forwards;
+}
+
+.home-page header .heading-svg path:nth-child(2) {
+  stroke-dasharray: 440.6800231933594;
+  stroke-dashoffset: 440.6800231933594;
+  -webkit-animation: stroke-anim 1s ease-in forwards 0.3s;
+          animation: stroke-anim 1s ease-in forwards 0.3s;
+}
+
+.home-page header .heading-svg path:nth-child(3) {
+  stroke-dasharray: 491.6194763183594;
+  stroke-dashoffset: 491.6194763183594;
+  -webkit-animation: stroke-anim 1s ease-in forwards 0.6s;
+          animation: stroke-anim 1s ease-in forwards 0.6s;
+}
+
+.home-page header .heading-svg path:nth-child(4) {
+  stroke-dasharray: 328.3819885253906;
+  stroke-dashoffset: 328.3819885253906;
+  -webkit-animation: stroke-anim 1s ease-in forwards 0.9s;
+          animation: stroke-anim 1s ease-in forwards 0.9s;
+}
+
+.home-page header .heading-svg path:nth-child(5) {
+  stroke-dasharray: 500.09808349609375;
+  stroke-dashoffset: 500.09808349609375;
+  -webkit-animation: stroke-anim 1s ease-in forwards 1.2s;
+          animation: stroke-anim 1s ease-in forwards 1.2s;
+}
+
+.home-page header .heading-svg path:nth-child(6) {
+  stroke-dasharray: 440.6799621582031;
+  stroke-dashoffset: 440.6799621582031;
+  -webkit-animation: stroke-anim 1s ease-in forwards 1.5s;
+          animation: stroke-anim 1s ease-in forwards 1.5s;
+}
+
+.home-page header .heading-svg path:nth-child(7) {
+  stroke-dasharray: 600.5836181640625;
+  stroke-dashoffset: 600.5836181640625;
+  -webkit-animation: stroke-anim 1s ease-in forwards 1.8s;
+          animation: stroke-anim 1s ease-in forwards 1.8s;
+}
+
+.home-page header .heading-svg path:nth-child(8) {
+  stroke-dasharray: 476.51953125;
+  stroke-dashoffset: 476.51953125;
+  -webkit-animation: stroke-anim 1s ease-in forwards 2.1s;
+          animation: stroke-anim 1s ease-in forwards 2.1s;
+}
+
+.home-page header .heading-svg path:nth-child(9) {
+  stroke-dasharray: 440.68212890625;
+  stroke-dashoffset: 440.68212890625;
+  -webkit-animation: stroke-anim 1s ease-in forwards 2.4s;
+          animation: stroke-anim 1s ease-in forwards 2.4s;
+}
+
+.home-page header .heading-svg path:nth-child(10) {
+  stroke-dasharray: 500.0986328125;
+  stroke-dashoffset: 500.0986328125;
+  -webkit-animation: stroke-anim 1s ease-in forwards 2.7s;
+          animation: stroke-anim 1s ease-in forwards 2.7s;
 }
 
 .home-page header h2 {
+  width: 70vw;
   color: #ffffff;
   text-align: right;
+  margin: 5vh 30px 0px 10%;
   margin-top: 5vh;
   margin-right: 30px;
   font-family: Arial;
   font-size: 15px;
   font-weight: bold;
   letter-spacing: 5px;
+}
+
+@-webkit-keyframes fill-color {
+  0% {
+    fill: transparent;
+  }
+  100% {
+    fill: white;
+  }
+}
+
+@keyframes fill-color {
+  0% {
+    fill: transparent;
+  }
+  100% {
+    fill: white;
+  }
+}
+
+@-webkit-keyframes stroke-anim {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes stroke-anim {
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
 .home-page .background {
@@ -180,7 +287,7 @@ body {
   width: 100vw;
   padding: 8px 0px;
   z-index: 5;
-  background: black;
+  background: rgba(0, 0, 0, 0.96);
   border-top: 0.5px solid black;
   -webkit-box-shadow: 0 0 3px 5px black;
           box-shadow: 0 0 3px 5px black;

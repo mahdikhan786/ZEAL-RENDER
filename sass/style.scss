@@ -90,21 +90,71 @@ body {
     }
 
     header {
-        h1 {
-            color: $heading-color;
-            text-align: left;
-            margin-left: 10vw; // vary
-            padding-top: 15vh;
-            font-family: $heading-font;
-            font-size: 50px; // vary
-            font-weight: bold;
+        margin:30vh 0vw;
+        .heading-svg{
+            position: absolute;
+            top:15vh;
+            left:0vw;
+            width:70vw;
+            height:80px;
+            margin-left:15%;
+            animation:fill-color 2s ease-in forwards 2.9s;
+            path:nth-child(1){
+                stroke-dasharray:408.1384582519531 ;
+                stroke-dashoffset:408.1384582519531 ;
+                animation: stroke-anim 1s ease-in forwards;
+            }
+            path:nth-child(2){
+                stroke-dasharray:440.6800231933594 ;
+                stroke-dashoffset:440.6800231933594 ;
+                animation: stroke-anim 1s ease-in forwards 0.3s;
+            }
+            path:nth-child(3){
+                stroke-dasharray:491.6194763183594 ;
+                stroke-dashoffset: 491.6194763183594;
+                animation: stroke-anim 1s ease-in forwards 0.6s;
+            }
+            path:nth-child(4){
+                stroke-dasharray: 328.3819885253906;
+                stroke-dashoffset:328.3819885253906 ;
+                animation: stroke-anim 1s ease-in forwards 0.9s;
+            }
+            path:nth-child(5){
+                stroke-dasharray:500.09808349609375 ;
+                stroke-dashoffset: 500.09808349609375;
+                animation: stroke-anim 1s ease-in forwards 1.2s;
+            }
+            path:nth-child(6){
+                stroke-dasharray:440.6799621582031 ;
+                stroke-dashoffset:440.6799621582031 ;
+                animation: stroke-anim 1s ease-in forwards 1.5s;
+            }
+            path:nth-child(7){
+                stroke-dasharray: 600.5836181640625;
+                stroke-dashoffset: 600.5836181640625;
+                animation: stroke-anim 1s ease-in forwards 1.8s ;
+            }
+            path:nth-child(8){
+                stroke-dasharray:476.51953125 ;
+                stroke-dashoffset:476.51953125 ;
+                animation: stroke-anim 1s ease-in forwards 2.1s;
+            }
+            path:nth-child(9){
+                stroke-dasharray:440.68212890625 ;
+                stroke-dashoffset:440.68212890625 ;
+                animation: stroke-anim 1s ease-in forwards 2.4s;
+            }
+            path:nth-child(10){
+                stroke-dasharray:500.0986328125 ;
+                stroke-dashoffset:500.0986328125 ;
+                animation: stroke-anim 1s ease-in forwards 2.7s;
+            }
         }
-
-
-
         h2 {
+            width:70vw;
             color: $heading-color;
             text-align: right;
+            margin:5vh 30px 0px 10%;
             margin-top: 5vh;
             margin-right: 30px; //vary
             font-family: $heading-font;
@@ -112,6 +162,19 @@ body {
             font-weight: bold;
             letter-spacing: 5px;
         }
+    }
+    @keyframes fill-color {
+        0%{
+            fill:transparent;
+        }
+        100%{
+            fill:white;
+        }
+    }
+    @keyframes stroke-anim{
+     to{
+         stroke-dashoffset: 0;
+     }
     }
 
     .background {
@@ -148,7 +211,7 @@ body {
             width:100vw;
             padding:8px 0px;
             z-index:5;
-            background:black ;//rgb(111,8,113);
+            background:rgba(0,0,0,0.96) ;
             border-top:0.5px solid black;
             box-shadow:0 0 3px 5px black;
             position:fixed;
@@ -171,6 +234,7 @@ body {
                         color: $paragraph-color;
                     }
                 }
+                
             }
 
             .homepage-location {
@@ -209,9 +273,12 @@ body {
                     }
                 }
             }
+            
         }
+        
     }
 }
+
 
 .display-none {
     display: none;
