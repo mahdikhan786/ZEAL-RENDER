@@ -201,7 +201,6 @@ body {
 }
 
 .home-page header h2 {
-  width: 70vw;
   color: #ffffff;
   text-align: right;
   margin: 5vh 30px 0px 10%;
@@ -477,6 +476,50 @@ body {
   list-style: none;
 }
 
+.services-page .js-slider {
+  position: relative;
+  background: black;
+  height: 300px;
+  width: 90vw;
+  margin: 20px auto;
+  border-radius: 5px;
+}
+
+.services-page .sliders {
+  opacity: 0.7;
+  z-index: 3;
+  background: white;
+  padding: 2px 5px;
+  border: 0.3px solid black;
+  border-radius: 10px;
+  -webkit-box-shadow: 2px 2px 5px black;
+          box-shadow: 2px 2px 5px black;
+}
+
+.services-page .sliders:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transition: all 0.15s ease-in;
+  transition: all 0.15s ease-in;
+}
+
+.services-page .slider-left {
+  position: absolute;
+  top: 45%;
+  left: 2%;
+}
+
+.services-page .slider-right {
+  position: absolute;
+  top: 45%;
+  right: 2%;
+}
+
+.services-page .slider-image {
+  height: 100%;
+  width: 100%;
+}
+
 .services-page .background {
   position: absolute;
   top: 0;
@@ -486,6 +529,52 @@ body {
   height: 100%;
   width: 100vw;
   z-index: -1;
+}
+
+.transition-left {
+  -webkit-animation: slide-left .15s ease-in;
+          animation: slide-left .15s ease-in;
+}
+
+.transition-right {
+  -webkit-animation: slide-right .15s ease-in;
+          animation: slide-right .15s ease-in;
+}
+
+@-webkit-keyframes slide-left {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes slide-right {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 .invitation-page {
@@ -620,6 +709,10 @@ body {
   }
   .services-page .services-list ul li {
     font-size: 25px;
+  }
+  .services-page .js-slider {
+    width: 50vw;
+    margin: 20px auto;
   }
   .invitation-page p {
     font-size: 25px;

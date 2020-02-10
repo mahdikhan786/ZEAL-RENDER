@@ -151,7 +151,7 @@ body {
             }
         }
         h2 {
-            width:70vw;
+            
             color: $heading-color;
             text-align: right;
             margin:5vh 30px 0px 10%;
@@ -378,7 +378,42 @@ body {
         }
     }
 
-    
+    .js-slider{
+        position:relative;
+        background:black;
+        height:300px;
+        width:90vw;
+        margin:20px auto;
+        border-radius: 5px;;
+      }
+      .sliders{
+        opacity:0.7;
+        z-index:3;
+        background:white;
+        padding:2px 5px;
+        border: 0.3px solid black;
+        border-radius:10px;
+        box-shadow:2px 2px 5px black;
+      }
+      .sliders:hover{
+        box-shadow:none;
+        transition:all 0.15s ease-in;
+      }
+      .slider-left{
+        position:absolute;
+        top:45%;
+        left:2%;
+      }
+      .slider-right{
+        position:absolute;
+        top:45%;
+        right:2%;
+      }
+      .slider-image{
+        height:100%;
+        width:100%;
+      }
+      
 
     .background {
         position: absolute;
@@ -390,6 +425,28 @@ body {
         z-index: -1;
     }
 }
+.transition-left{
+    animation:slide-left .15s ease-in;
+  }
+  .transition-right{
+    animation:slide-right .15s ease-in;
+  }
+  @keyframes slide-left{
+    0%{
+      opacity:1;
+    }
+    100%{
+      opacity:0;
+    }
+  }
+  @keyframes slide-right{
+    0%{
+      opacity:1;  
+    }
+    100%{
+      opacity:0;
+    }
+  }
 
 .invitation-page {
     position: relative;
@@ -547,6 +604,11 @@ body {
                     font-size: 25px;
                 }
             }
+        }
+        .js-slider{
+            width:50vw;
+            margin:20px auto;
+
         }
 
         
