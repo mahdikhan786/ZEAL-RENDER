@@ -312,6 +312,9 @@ body {
     }
 
     .about-cols {
+        opacity:0;
+        transform: translateY(80px);
+        transition: 0.8s all ease-in-out;
         display: flex;
         flex-direction: column;
         justify-content:space-evenly;
@@ -341,6 +344,7 @@ body {
     }
 }
 
+
 .services-page {
     position: relative;
     z-index: 1;
@@ -356,6 +360,9 @@ body {
     }
 
     .services-list {
+        opacity:0;
+        transform: translateY(80px);
+        transition: 0.8s all ease-in-out;
         display: flex;
         flex-direction: column;
         margin: 0 0 0 10vw;

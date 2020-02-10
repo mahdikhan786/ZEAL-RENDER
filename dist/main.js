@@ -5,6 +5,9 @@ const toggleIcon = document.querySelector(".toggler"); // central-hamburger-line
 const sliderLeft = document.querySelector(".slider-left");
 const sliderRight = document.querySelector(".slider-right");
 const sliderImage = document.querySelector(".slider-image");
+const aboutColumns = document.querySelector('.about-cols');
+const servicesList = document.querySelector('.services-list');
+
 
 // toggling the class name for css animation
 const toggle = () => {
@@ -30,6 +33,20 @@ const sliderImageArray = [
 let sliderImageNumber = 0;
 
 //functions
+const appear = () => {
+ let aboutToTop = aboutColumns.getBoundingClientRect().top;
+ let servicesToTop = servicesList.getBoundingClientRect().top;
+ let screenHeight = window.innerHeight;
+
+ if(aboutToTop < (screenHeight / 1.3)){
+   aboutColumns.style.opacity = '1' ;
+   aboutColumns.style.transform = 'translateY(0px)' ;
+ };
+ if(servicesToTop < (screenHeight / 1.3)){
+   servicesList.style.opacity = '1';
+   servicesList.style.transform = 'translateY(0px)';
+ }
+};
 const leftSlide = () => {
   sliderImage.classList.add("transition-left");
   setTimeout(() => {
@@ -66,24 +83,12 @@ const rightSlide = () => {
   }, 100);
 };
 //adding event listeners
+window.addEventListener('scroll', appear);
 sliderLeft.addEventListener("click", leftSlide);
 sliderRight.addEventListener("click", rightSlide);
 menuToggle.addEventListener("click", toggle);
 
-setInterval(() => {
-    sliderImage.classList.add("transition-right");
-    setTimeout(() => {
-      sliderImage.classList.remove("transition-right");
-    }, 150);
-    setTimeout(() => {
-      if (sliderImageNumber < sliderImageArray.length - 1) {
-        sliderImageNumber++;
-        console.log(`slide Number : ${sliderImageNumber}`);
-        sliderImage.setAttribute("src", sliderImageArray[sliderImageNumber]);
-      } else {
-        sliderImageNumber = 0;
-        console.log(`slide Number : ${sliderImageNumber}`);
-        sliderImage.setAttribute("src", sliderImageArray[sliderImageNumber]);
-      }
-    }, 100);
-  },2500)
+const slideLoader = setInterval(rightSlide,100);
+const slideLoaderStop = setTimeout(() => clearInterval(slideLoader), 1100);
+const slideLoop = setInterval(rightSlide,2000);
+ 

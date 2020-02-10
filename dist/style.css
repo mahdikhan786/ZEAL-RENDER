@@ -397,6 +397,11 @@ body {
 }
 
 .about-page .about-cols {
+  opacity: 0;
+  -webkit-transform: translateY(80px);
+          transform: translateY(80px);
+  -webkit-transition: 0.8s all ease-in-out;
+  transition: 0.8s all ease-in-out;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -451,6 +456,11 @@ body {
 }
 
 .services-page .services-list {
+  opacity: 0;
+  -webkit-transform: translateY(80px);
+          transform: translateY(80px);
+  -webkit-transition: 0.8s all ease-in-out;
+  transition: 0.8s all ease-in-out;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
