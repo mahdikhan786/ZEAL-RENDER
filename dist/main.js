@@ -2,11 +2,12 @@
 const menuToggle = document.querySelector(".menu-toggle"); // hamburger-menu
 const toggleBody = document.querySelector(".toggle-body"); // menu-bar
 const toggleIcon = document.querySelector(".toggler"); // central-hamburger-line
-const sliderLeft = document.querySelector(".slider-left");
-const sliderRight = document.querySelector(".slider-right");
-const sliderImage = document.querySelector(".slider-image");
 const aboutColumns = document.querySelector('.about-cols');
 const servicesList = document.querySelector('.services-list');
+const leftBtn = document.querySelector(".left-btn");
+const rightBtn = document.querySelector(".right-btn");
+const imgSlide = document.querySelector(".img-slide");
+const sliderImages = document.querySelectorAll(".slide-img");
 
 
 // toggling the class name for css animation
@@ -29,8 +30,10 @@ const sliderImageArray = [
   "./resources/kitchen2.jpg",
   "./resources/office.jpg"
 ];
-//slider number
-let sliderImageNumber = 0;
+let slideImagesCount = sliderImages.length - 1;
+let sliderCount = 0;
+currentImgWidth = sliderImages[sliderCount].offsetWidth;
+
 
 //functions
 const appear = () => {
@@ -47,48 +50,41 @@ const appear = () => {
    servicesList.style.transform = 'translateY(0px)';
  }
 };
+
 const leftSlide = () => {
-  sliderImage.classList.add("transition-left");
-  setTimeout(() => {
-    sliderImage.classList.remove("transition-left");
-  }, 150);
-  setTimeout(() => {
-    if (sliderImageNumber > 0) {
-      sliderImageNumber--;
-      console.log(`slide Number : ${sliderImageNumber}`);
-      sliderImage.setAttribute("src", sliderImageArray[sliderImageNumber]);
-    } else {
-      sliderImageNumber = sliderImageArray.length - 1;
-      console.log(`slide Number : ${sliderImageNumber}`);
-      sliderImage.setAttribute("src", sliderImageArray[sliderImageNumber]);
-    }
-  }, 100);
+  // (>) button
+
+  if (sliderCount < slideImagesCount) {
+    imgSlide.style.transform = `translateX(-${currentImgWidth +
+      currentImgWidth * sliderCount}px)`;
+    sliderCount++;
+  } else if (sliderCount == slideImagesCount) {
+    sliderCount = 0;
+    imgSlide.style.transform = `translateX(0px)`;
+  }
+};
+const rightSlide = () => {
+  // (<) button
+
+  if (sliderCount > 0) {
+    imgSlide.style.transform = `translateX(-${currentImgWidth * sliderCount -
+      currentImgWidth}px)`;
+    sliderCount--;
+  } else if (sliderCount == 0) {
+    sliderCount = slideImagesCount;
+    console.log(sliderCount);
+    imgSlide.style.transform = `translateX(-${currentImgWidth *
+      sliderCount}px)`;
+  }
 };
 
-const rightSlide = () => {
-  sliderImage.classList.add("transition-right");
-  setTimeout(() => {
-    sliderImage.classList.remove("transition-right");
-  }, 150);
-  setTimeout(() => {
-    if (sliderImageNumber < sliderImageArray.length - 1) {
-      sliderImageNumber++;
-      console.log(`slide Number : ${sliderImageNumber}`);
-      sliderImage.setAttribute("src", sliderImageArray[sliderImageNumber]);
-    } else {
-      sliderImageNumber = 0;
-      console.log(`slide Number : ${sliderImageNumber}`);
-      sliderImage.setAttribute("src", sliderImageArray[sliderImageNumber]);
-    }
-  }, 100);
-};
 //adding event listeners
 window.addEventListener('scroll', appear);
-sliderLeft.addEventListener("click", leftSlide);
-sliderRight.addEventListener("click", rightSlide);
 menuToggle.addEventListener("click", toggle);
+leftBtn.addEventListener("click", rightSlide);
+rightBtn.addEventListener("click", leftSlide);
+setInterval(leftSlide,2000);
 
-const slideLoader = setInterval(rightSlide,100);
-const slideLoaderStop = setTimeout(() => clearInterval(slideLoader), 1100);
-const slideLoop = setInterval(rightSlide,2000);
+
+
  

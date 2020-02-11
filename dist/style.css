@@ -398,8 +398,8 @@ body {
 
 .about-page .about-cols {
   opacity: 0;
-  -webkit-transform: translateY(80px);
-          transform: translateY(80px);
+  -webkit-transform: translateY(40px);
+          transform: translateY(40px);
   -webkit-transition: 0.8s all ease-in-out;
   transition: 0.8s all ease-in-out;
   display: -webkit-box;
@@ -457,8 +457,8 @@ body {
 
 .services-page .services-list {
   opacity: 0;
-  -webkit-transform: translateY(80px);
-          transform: translateY(80px);
+  -webkit-transform: translateY(40px);
+          transform: translateY(40px);
   -webkit-transition: 0.8s all ease-in-out;
   transition: 0.8s all ease-in-out;
   display: -webkit-box;
@@ -486,50 +486,6 @@ body {
   list-style: none;
 }
 
-.services-page .js-slider {
-  position: relative;
-  background: black;
-  height: 300px;
-  width: 90vw;
-  margin: 20px auto;
-  border-radius: 5px;
-}
-
-.services-page .sliders {
-  opacity: 0.7;
-  z-index: 3;
-  background: white;
-  padding: 2px 5px;
-  border: 0.3px solid black;
-  border-radius: 10px;
-  -webkit-box-shadow: 2px 2px 5px black;
-          box-shadow: 2px 2px 5px black;
-}
-
-.services-page .sliders:hover {
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  -webkit-transition: all 0.15s ease-in;
-  transition: all 0.15s ease-in;
-}
-
-.services-page .slider-left {
-  position: absolute;
-  top: 45%;
-  left: 2%;
-}
-
-.services-page .slider-right {
-  position: absolute;
-  top: 45%;
-  right: 2%;
-}
-
-.services-page .slider-image {
-  height: 100%;
-  width: 100%;
-}
-
 .services-page .background {
   position: absolute;
   top: 0;
@@ -539,6 +495,54 @@ body {
   height: 100%;
   width: 100vw;
   z-index: -1;
+}
+
+.services-page .slide-viewbox {
+  padding: 12px 0px;
+  overflow: hidden;
+  position: relative;
+  width: 90vw;
+  margin: 20px auto;
+  -webkit-box-shadow: inset 0 0 12px 0px black;
+          box-shadow: inset 0 0 12px 0px black;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.services-page .slide-viewbox .img-slide {
+  z-index: -1;
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+  -webkit-transition: 0.7s all ease-in;
+  transition: 0.7s all ease-in;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.services-page .slide-viewbox .img-slide .slide-img {
+  min-width: 100%;
+  height: 100%;
+}
+
+.services-page .slide-viewbox .btn {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  padding: 5px 10px;
+  border: none;
+  -webkit-box-shadow: 0px 0px 10px 0px black;
+          box-shadow: 0px 0px 10px 0px black;
+}
+
+.services-page .slide-viewbox .left-btn {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+}
+
+.services-page .slide-viewbox .right-btn {
+  position: absolute;
+  top: 50%;
+  right: 12px;
 }
 
 .transition-left {
@@ -720,9 +724,9 @@ body {
   .services-page .services-list ul li {
     font-size: 25px;
   }
-  .services-page .js-slider {
+  .services-page .slide-viewbox {
     width: 50vw;
-    margin: 20px auto;
+    margin: 10px auto;
   }
   .invitation-page p {
     font-size: 25px;
