@@ -32,7 +32,9 @@ const sliderImageArray = [
 ];
 let slideImagesCount = sliderImages.length - 1;
 let sliderCount = 0;
-currentImgWidth = sliderImages[sliderCount].offsetWidth;
+let currentImgWidth = sliderImages[sliderCount].offsetWidth;
+
+
 
 
 //functions
@@ -50,10 +52,10 @@ const appear = () => {
    servicesList.style.transform = 'translateY(0px)';
  }
 };
-
+// to right
 const leftSlide = () => {
   // (>) button
-
+  
   if (sliderCount < slideImagesCount) {
     imgSlide.style.transform = `translateX(-${currentImgWidth +
       currentImgWidth * sliderCount}px)`;
@@ -63,6 +65,7 @@ const leftSlide = () => {
     imgSlide.style.transform = `translateX(0px)`;
   }
 };
+// to left 
 const rightSlide = () => {
   // (<) button
 
@@ -77,13 +80,21 @@ const rightSlide = () => {
       sliderCount}px)`;
   }
 };
+//automatic slider
+let automaticSlider = setInterval(leftSlide,2000);
+//slider stop
+let stopSlider = () => clearInterval(automaticSlider);
 
 //adding event listeners
 window.addEventListener('scroll', appear);
 menuToggle.addEventListener("click", toggle);
 leftBtn.addEventListener("click", rightSlide);
 rightBtn.addEventListener("click", leftSlide);
-setInterval(leftSlide,2000);
+leftBtn.addEventListener("click", stopSlider);
+rightBtn.addEventListener("click", stopSlider);
+
+
+
 
 
 
