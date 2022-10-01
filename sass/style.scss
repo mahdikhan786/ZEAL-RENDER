@@ -341,7 +341,79 @@ body {
     z-index: -1;
   }
 }
+.clients-page{
+  min-height: 100vh;
+  position: relative;
+  h2{
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 40px;
+    text-align: center;
+    padding: 60px 0px 80px 0px;
+}
+.cp-cont{
+  display: flex;
+  flex-wrap: wrap;
+.clients-cont{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 50%;
+  @media (max-width: 1000px) {
+    width: 100%;
+  }
+  .client-cont{
+    display: flex;
+    margin: 1rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border-radius: 1rem;
+    height: 12rem;
+    width: 15rem;
+    background: white;
+      img{
+        width: 13rem;
+        height: 7rem;
+        box-shadow: 0px 0px 10px -3px grey;
+        border-radius: 1rem;
+      }
+    p{
+      font-family: $para-font;
+      font-size: 1rem;
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+  
+}
+.projects-cont{
+  display: flex;
+  flex-direction: column;
+  .project-cont{
+    padding: 1rem;
+    margin:1rem;
+    background-color: white;
+    color: black;
+    border-radius: 1rem;
+    font-family: $para-font;
 
+  }
+}
+}
+
+  .background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: blur(2px) brightness(15%);
+    height: 100%;
+    width: 100vw;
+    z-index: -1;
+  }
+}
 .services-page {
   position: relative;
   z-index: 1;

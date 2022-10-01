@@ -302,76 +302,8 @@ body {
 }
 
 .clients-page {
-  min-height: 100vh;
-  position: relative;
-}
-.clients-page h2 {
-  color: #ffffff;
-  font-family: Arial;
-  font-size: 40px;
-  text-align: center;
-  padding: 60px 0px 80px 0px;
-}
-.clients-page .cp-cont {
-  display: flex;
-  flex-wrap: wrap;
-}
-.clients-page .cp-cont .clients-cont {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 50%;
-}
-@media (max-width: 1000px) {
-  .clients-page .cp-cont .clients-cont {
-    width: 100%;
-  }
-}
-.clients-page .cp-cont .clients-cont .client-cont {
-  display: flex;
-  margin: 1rem;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-  border-radius: 1rem;
-  height: 12rem;
-  width: 15rem;
-  background: white;
-}
-.clients-page .cp-cont .clients-cont .client-cont img {
-  width: 13rem;
-  height: 7rem;
-  box-shadow: 0px 0px 10px -3px grey;
-  border-radius: 1rem;
-}
-.clients-page .cp-cont .clients-cont .client-cont p {
-  font-family: "Kanit", sans-serif;
-  font-size: 1rem;
-  font-weight: bold;
-  text-align: center;
-}
-.clients-page .cp-cont .projects-cont {
-  display: flex;
-  flex-direction: column;
-}
-.clients-page .cp-cont .projects-cont .project-cont {
-  padding: 1rem;
-  margin: 1rem;
-  background-color: white;
-  color: black;
-  border-radius: 1rem;
-  font-family: "Kanit", sans-serif;
-}
-.clients-page .background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  filter: blur(2px) brightness(15%);
-  height: 100%;
-  width: 100vw;
-  z-index: -1;
+  height: 100vh;
+  border: 1px solid white;
 }
 
 .services-page {
